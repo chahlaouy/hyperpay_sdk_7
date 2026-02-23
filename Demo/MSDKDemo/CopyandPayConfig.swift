@@ -1,0 +1,97 @@
+import UIKit
+
+class CopyandPayConfig: NSObject {
+    
+    // MARK: - The default amount and currency that are used for AFTERPAY_PACIFIC
+    static let amount: Double = 108.50
+    static let currency: String = "USD"
+    static let paymentType: String = "PA"
+   
+    static let checkoutPaymentBrands = ["AFTERPAY_PACIFIC"]
+    
+    // MARK: - Other constants
+    static let asyncPaymentDidCompletedNotificationKey = "AsynchronousPaymentDidCompleteNotification"
+    
+    static var afterpayParams = [
+                    "billing.city": "Naples",
+                    "billing.country": "US",
+                    "billing.postcode": "34105",
+                    "billing.street1": "XYZ Rd",
+                    "billing.street2": "ABC",
+                    "cart.items[0].merchantItemId": "BB6149",
+                    "cart.items[0].name": "Shoes",
+                    "cart.items[0].price": "101.00",
+                    "cart.items[0].quantity": "1",
+                    "cart.items[0].sku": "BB6149_540",
+                    "cart.items[0].totalAmount": "101.00",
+                    "cart.items[0].type": "inline",
+                    "cart.items[1].merchantItemId": "preorder",
+                    "cart.items[1].name": "Battery Power Pack Charger",
+                    "cart.items[1].price": "2.00",
+                    "cart.items[1].quantity": "2",
+                    "cart.items[1].totalAmount": "4.00",
+                    "cart.items[1].type": "preorder",
+                    "cart.items[2].merchantItemId": "Wallpaper",
+                    "cart.items[2].name": "Wallpaper",
+                    "cart.items[2].price": "0.50",
+                    "cart.items[2].quantity": "1",
+                    "cart.items[2].totalAmount": "0.50",
+                    "cart.items[2].type": "digital",
+                    "cart.items[3].merchantItemId": "Wallpaper2",
+                    "cart.items[3].name": "Wallpaper2",
+                    "cart.items[3].price": "0.50",
+                    "cart.items[3].quantity": "1",
+                    "cart.items[3].totalAmount": "0.50",
+                    "cart.items[3].type": "personalized",
+                    "cart.items[4].merchantItemId": "Tax",
+                    "cart.items[4].name": "Tax line",
+                    "cart.items[4].price": "2.00",
+                    "cart.items[4].quantity": "1",
+                    "cart.items[4].totalAmount": "2.00",
+                    "cart.items[5].merchantItemId": "Shipping",
+                    "cart.items[5].name": "Shipping line",
+                    "cart.items[5].price": "1.00",
+                    "cart.items[5].quantity": "1",
+                    "cart.items[5].totalAmount": "1.00",
+                    "cart.items[5].type": "shipping",
+                    "cart.payments[0].account": "6006494353452459",
+                    "cart.payments[0].amount": "0.88",
+                    "cart.payments[0].brand": "SVS",
+                    "cart.payments[0].name": "Gift Card",
+                    "cart.payments[0].primary": "false",
+                    "cart.payments[0].status": "pending",
+                    "cart.payments[0].type": "giftcard",
+                    "cart.payments[1].account": "EMPL_ECOMENV-12345 - Employee Discount",
+                    "cart.payments[1].amount": "0.11",
+                    "cart.payments[1].name": "Promotion",
+                    "cart.payments[1].primary": "false",
+                    "cart.payments[1].status": "pending",
+                    "cart.payments[1].type": "promotion",
+                    "cart.payments[2].account": "12345678",
+                    "cart.payments[2].amount": "0.50",
+                    "cart.payments[2].brand": "YOLO",
+                    "cart.payments[2].name": "gift three",
+                    "cart.payments[2].type": "giftcard",
+                    "customer.email": "test@testemail.com",
+                    "customer.surname": "Last",
+                    "customer.givenName": "First",
+                    "customer.ip": "127.0.0.1",
+                    "merchantTransactionId":  "AD012340123",
+                    "shipping.city": "Naples",
+                    "shipping.comment": "Leave it at the door!!",
+                    "shipping.cost": "1.00",
+                    "shipping.country": "US",
+                    "shipping.customer.email": "test@testemail.com",
+                    "shipping.customer.surname": "Last",
+                    "shipping.customer.givenName": "First",
+                    "shipping.customer.phone": "1 (239) 403-4600",
+                    "shipping.expectedDate": "2020-12-20",
+                    "shipping.logisticsProvider": "UPS",
+                    "shipping.method": "STANDARD",
+                    "shipping.postcode": "34105",
+                    "shipping.state": "Florida",
+                    "shipping.street1": "QWERTY Rd",
+                    "shipping.street2": "ASDF 123",
+                    "taxAmount": "2.00"
+        ]
+}

@@ -1,0 +1,66 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 6.2 effective-5.10 (swiftlang-6.2.0.19.9 clang-1700.3.19.1)
+// swift-module-flags: -target x86_64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name OPPWAMobile_MSA
+// swift-module-flags-ignorable: -no-verify-emitted-module-interface -formal-cxx-interoperability-mode=off -interface-compiler-version 6.2
+import Foundation
+@_exported import OPPWAMobile_MSA
+import Swift
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@_inheritsConvenienceInitializers @objc public class OPPPaymentStatusResponse : ObjectiveC.NSObject, Swift.Decodable {
+  @objc public var resultCode: Swift.String {
+    @objc get
+  }
+  @objc public var resultDescription: Swift.String {
+    @objc get
+  }
+  @objc public var resultDetailsCardholderInfo: Swift.String {
+    @objc get
+  }
+  @objc public var resultPaymentBrand: Swift.String {
+    @objc get
+  }
+  @objc public var resultRedirectUrl: Swift.String {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+  required public init(from decoder: any Swift.Decoder) throws
+}
+@objc public enum OPPRequestServerMode : Swift.Int {
+  case test
+  case live
+  #if compiler(>=5.3) && $NonescapableTypes
+  public init?(rawValue: Swift.Int)
+  #endif
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class OPPMerchantServer : ObjectiveC.NSObject {
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func requestCheckoutId(amount: Swift.Double, currency: Swift.String, paymentType: Swift.String?, serverMode: OPPWAMobile_MSA.OPPRequestServerMode, extraParameters: [Swift.String : Swift.String]?, completionHandler: @escaping (Swift.String?, (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func requestPaymentStatus(resourcePath: Swift.String, completion: @escaping (OPPWAMobile_MSA.OPPPaymentStatusResponse?, (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func finalizePayPalContinue(checkoutId: Swift.String, response: OPPWAMobile_MSA.OPPPaymentStatusResponse, completion: @escaping (OPPWAMobile_MSA.OPPPaymentStatusResponse?, (any Swift.Error)?) -> Swift.Void)
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func finalizeAmazonPay(checkoutId: Swift.String, response: OPPWAMobile_MSA.OPPPaymentStatusResponse, shopperResultUrl: Swift.String, completion: @escaping (OPPWAMobile_MSA.OPPPaymentStatusResponse?, (any Swift.Error)?) -> Swift.Void)
+  #endif
+  @objc public static func clearCheckoutData(checkoutId: Swift.String)
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func isSuccessful(response: OPPWAMobile_MSA.OPPPaymentStatusResponse?) -> Swift.Bool
+  #endif
+  #if compiler(>=5.3) && $NonescapableTypes
+  @objc public static func isPending(response: OPPWAMobile_MSA.OPPPaymentStatusResponse?) -> Swift.Bool
+  #endif
+  @objc deinit
+}
+extension OPPWAMobile_MSA.OPPRequestServerMode : Swift.Equatable {}
+extension OPPWAMobile_MSA.OPPRequestServerMode : Swift.Hashable {}
+extension OPPWAMobile_MSA.OPPRequestServerMode : Swift.RawRepresentable {}

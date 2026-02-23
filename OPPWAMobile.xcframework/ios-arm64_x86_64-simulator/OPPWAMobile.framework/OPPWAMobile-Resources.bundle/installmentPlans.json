@@ -1,0 +1,64 @@
+{
+  "transactionAmount": 123112,
+  "transactionCurrency": "USD",
+  "paymentAccountReference": "V0010013820238835225373131610",
+  "merchantInfo": {
+    "category": "3001",
+    "partnerMerchantReferenceID": "98243463"
+  },
+  "matchedPlans": [
+    {
+      "vPlanID": "c85ee4d1-fe9f-e267-b693-1f4dae82ae01",
+      "name": "Plan name",
+      "type": "ISSUER_PROMOTION",
+      "numberOfInstallments": 4,
+      "installmentFrequency": "MONTHLY",
+      "termsAndConditions": [
+        {
+          "url": "https://dev...sa.com/support",
+          "version": 1,
+          "text": "Sample terms and conditions text",
+          "languageCode": "eng"
+        }
+      ],
+      "promotionInfo": {
+        "promotionCode": "A2",
+        "promotionID": "MBANK12"
+      },
+      "islamicPlan": false,
+      "costInfo": {
+        "annualPercentageRate": 320,
+        "feeInfo": [
+          {
+            "type": "CONSUMER",
+            "ratePercentage": 120,
+            "monthlyRatePercentage": 10,
+            "flatFee": 1000
+          },
+          {
+            "type": "CONSUMER_UPFRONT",
+            "ratePercentage": 150
+          }
+        ],
+        "totalPlanCost": 50450,
+        "totalFees": 450,
+        "totalUpfrontFees": 250,
+        "totalRecurringFees": 200,
+        "firstInstallment": {
+          "upfrontFee": 250,
+          "totalAmountExcludingUpfrontFee": 8617,
+          "installmentFee": 283,
+          "amount": 8334,
+          "totalAmount": 8867
+        },
+        "lastInstallment": {
+          "installmentFee": 35,
+          "amount": 8330,
+          "totalAmount": 8365
+        },
+        "currency": "USD"
+      },
+      "vPlanIDRef": "00000000CK"
+    }
+  ]
+}
